@@ -1,0 +1,74 @@
+# Biçim:  Kategori | Kanal adı | Link(ler) | (isteğe bağlı) 'iptv-org' veya resmi canlı yayın sayfası
+#
+# 3. sütunda birden fazla link olabilir (boşlukla ayrılır). Script bunları SIRAYLA test eder
+# ve ilk çalışanı kullanır; ilk link senin kendi (TV'nde denediğin) linkindir, diğerleri yedektir.
+# Hiçbiri çalışmazsa 4. sütuna bakar, o da yoksa eski linki listede bırakır. Kanal silinmez.
+# Yeni kanal eklemek için yeni bir satır yazman yeterli. '#' ile başlayan satırlar yok sayılır.
+
+# --- Ulusal ---
+Ulusal | TRT 1 | https://trt.daioncdn.net/trt-1/master_1440p.m3u8?&sid=8m3y9ksjna4b&app=ed3904e8-737b-4a5e-856a-1b0d7a0a94e2&ce=2 https://tv-trt1.medya.trt.com.tr/master.m3u8
+Ulusal | ATV | https://trkvz.daioncdn.net/atv/atv_1080p.m3u8?e=1785106159&st=XnYqneh6bL1qM8-eBusHHw&sid=8m2wmcw1iny9&app=d1ce2d40-5256-4550-b02e-e73c185a314e&ce=3 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
+Ulusal | Kanal D | https://demiroren.daioncdn.net/kanald/kanald_1080p.m3u8?&sid=8m3yb31k4p7c&app=da2109ea-5dfe-4107-89ab-23593336ed61&ce=3 https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3
+Ulusal | Show TV | https://ciner.daioncdn.net/showtv/showtv_1080p.m3u8?ex=1664766175&st=RBzhSuGauna0OGld-DJUVA&tv=1&sid=8m2wre12d1km&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558&ce=3 https://ciner.daioncdn.net/showtv/showtv.m3u8?app=showtv_web
+Ulusal | Star TV | https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8m2wv6y3ow2m&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3 https://dogus.daioncdn.net/startv/startv_720p.m3u8?&sid=8l4w3lst4co5&app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3
+Ulusal | TV8 | https://tv8.daioncdn.net/tv8/tv8_1080p.m3u8?&sid=8m2wwrljafep&app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3 https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
+Ulusal | NOW | https://nowtv-live-ad.ercdn.net/nowtv/nowtv_720p.m3u8?e=1785118712&st=HVNWs8GCKS1KXecVTWqPCA https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
+Ulusal | Kanal 7 | https://kanal7.daioncdn.net/kanal7/kanal7_1080p.m3u8?&sid=8m2xbsag22t9&app=f99587ad-1637-494d-8255-da35b09d17a1&ce=3 https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
+Ulusal | Beyaz TV | https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8 https://beyaztv.daioncdn.net/beyaztv/beyaztv.m3u8?app=fcd5c66b-da9d-44ba-a410-4f34805c397d&ce=3
+Ulusal | Teve2 | https://demiroren.daioncdn.net/teve2/teve2_1080p.m3u8?&sid=8m2xoocsgdbr&app=6aab838a-437e-4a1b-bbd0-e30f79cdbbbd&ce=3 https://demiroren-live.daioncdn.net/teve2/teve2.m3u8
+Ulusal | TV8.5 | https://tv8.daioncdn.net/tv8bucuk/tv8bucuk_1080p.m3u8?&sid=8m2y9n0647kj&app=bf58ab52-4865-4c81-b223-26b41009801e&ce=3 | iptv-org
+Ulusal | A2 TV | https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
+Ulusal | TV4 | https://turkmedya-live.ercdn.net/tv4/tv4.m3u8
+Ulusal | Flash TV | https://mn-nl.mncdn.com/blutv_flashtv/live.m3u8
+
+# --- Haber ---
+Haber | TRT Haber | https://tv-trthaber.medya.trt.com.tr/master_1440.m3u8 https://tv-trthaber.medya.trt.com.tr/master.m3u8
+Haber | NTV | https://dogus.daioncdn.net/ntv/ntv_1080p.m3u8?token=e8c0dec16bf84c8cc187224d13811c0e705fd2c58b25d7ee&sid=8m2xv7z2neg6&app=c68bddbe-3dbf-49f7-892a-93de5ae37f1f&ce=3 https://dogus-live.daioncdn.net/ntv/ntv.m3u8 https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web
+Haber | CNN Türk | https://live.duhnet.tv//S2/HLS_LIVE/cnnturknp/track_4_1000/playlist.m3u8?&live=true&app=com.cnnturk&st=PYzwl2RoMuvkXgpFYxg3KQ&e=1785097203 | iptv-org
+Haber | Habertürk | https://ciner.daioncdn.net/haberturktv/haberturktv_1080p.m3u8?sid=8m2xx7p36idp&app=c98ab0b0-50cc-495b-bb37-778e91f5ff5b&ce=3 https://ciner-live.daioncdn.net/haberturktv/haberturktv.m3u8 https://tv.ensonhaber.com/haberturk/haberturk.m3u8
+Haber | A Haber | https://trkvz.daioncdn.net/ahaber/ahaber_1080p.m3u8?e=1785131660&st=VPTsFpzgj8ICPm456obhFA&sid=8m3yj9f89fn5&app=9aedd495-cc54-4ad3-a01d-9573163f078a&ce=2 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
+Haber | Halk TV | https://halktv.daioncdn.net/halktv/halktv_1080p.m3u8?sid=8m2xzec1fa5e&app=c86957d3-74a7-44da-9ad2-dc358c769609&ce=3 https://halktv-live.daioncdn.net/halktv/halktv.m3u8
+Haber | TV100 | https://tv100-live.daioncdn.net/tv100/tv100.m3u8
+Haber | Haber Global | https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
+Haber | TGRT Haber | https://canli.tgrthaber.com/tgrt.m3u8
+Haber | 24 TV | https://turkmedya-live.ercdn.net/tv24/tv24.m3u8 https://mn-nl.mncdn.com/kanal24/smil:kanal24.smil/playlist.m3u8
+Haber | Tele 1 | https://tele1-live.ercdn.net/tele1/tele1.m3u8
+Haber | Akit TV | https://akittv-live.ercdn.net/akittv/akittv.m3u8
+Haber | Ülke TV | https://mn-nl.mncdn.com/blutv_ulketv2/live.m3u8
+
+# --- Ekonomi ---
+Ekonomi | Bloomberg HT | https://ciner.daioncdn.net/bloomberght/bloomberght_720p.m3u8?ex=1649424566&st=4Y790MeXScF5LDOhVNykUQ&tv=1&sid=8m2y7b3ewpwp&app=201b9556-b11c-4d92-b264-f21fd24e9aaf&ce=3 https://ciner.daioncdn.net/bloomberght/bloomberght.m3u8
+Ekonomi | CNBC-e | https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
+Ekonomi | Ekoturk | https://cdn.ekoturk.net/hls/master.m3u8
+
+# --- Spor ---
+Spor | TRT Spor | https://trt.daioncdn.net/trtspor/master_1440p.m3u8?&sid=8m3yn1bk3jxp&app=71ff325a-50b6-48f4-8a67-3daa89386c24&ce=2 https://tv-trtspor1.medya.trt.com.tr/master.m3u8
+Spor | TRT Spor Yıldız | https://trt.daioncdn.net/trtspor-yildiz/master_1440p.m3u8?&sid=8m3yoi6oqk0t&app=9f849b8c-7fc0-46a2-a9ec-ff8e2b35960d&ce=2 https://tv-trtspor2.medya.trt.com.tr/master.m3u8
+Spor | A Spor | https://trkvz.daioncdn.net/aspor/aspor_1080p.m3u8?e=1785107247&st=IDil1Ey2jo1s7O_qEWdBig&sid=8m2y8l6zbyqs&app=45f847c4-04e8-419a-a561-2ebf87084765&ce=3 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
+Spor | HTSpor TV | https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
+Spor | TJK TV | https://tjktv-live.tjk.org/tjktv.m3u8
+Spor | FB TV | http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
+
+# --- Belgesel-Yaşam ---
+Belgesel-Yaşam | TRT Belgesel | https://tv-trtbelgesel-dai.medya.trt.com.tr/master.m3u8 https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
+Belgesel-Yaşam | TLC | https://dogus.daioncdn.net/tlc/tlc_720p.m3u8?token=ZkR6M1d0YXpUOGRTdkF0QmZsdmczN2M2UjJaaXRtR1BiNXo3UVY5V2FZRT0=&sid=8m3yux6d1u3p&app=1aca0aa1-06e3-41ff-a8e5-38d7df475469&ce=3 | iptv-org
+Belgesel-Yaşam | DMAX | https://dogus.daioncdn.net/dmax/dmax_720p.m3u8?token=TGRGU2VTL1NEd1FYdHNnenB4WFZPM2IzbG8yZ2VXcTZRalI1aVBOK01xND0=&sid=8m3ywvr6i6ya&app=5a02c599-d17e-4982-9b04-090934d51af7&ce=3 | iptv-org
+
+# --- Çocuk ---
+Çocuk | TRT Çocuk | https://tv-trtcocuk.medya.trt.com.tr/master_1440.m3u8 https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
+Çocuk | Minika Çocuk | https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
+Çocuk | Minika Go | https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
+Çocuk | TRT Diyanet Çocuk | https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
+
+# --- Müzik ---
+Müzik | TRT Müzik | https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
+Müzik | Kral Pop TV | https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
+Müzik | Number 1 Türk | https://mn-nl.mncdn.com/blutv_nr1turk2/live.m3u8
+
+# --- TRT-Kültür ---
+TRT-Kültür | TRT Türk | https://tv-trtturk.medya.trt.com.tr/master.m3u8
+TRT-Kültür | TRT Avaz | https://tv-trtavaz.medya.trt.com.tr/master.m3u8
+TRT-Kültür | TRT Kurdî | https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
+
+# --- Dizi-Film ---
+Dizi-Film | Bizimev TV | https://mn-nl.mncdn.com/blutv_bizimev/bizimev_sd.smil/playlist.m3u8

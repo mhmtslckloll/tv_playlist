@@ -17,6 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10       # bir adım takılırsa iş kendiliğinden durur
     steps:
       - uses: actions/checkout@v4
 
@@ -27,14 +28,8 @@ jobs:
       - name: Bagimliliklar
         run: pip install requests
 
-      - name: Tarayici (dinamik sayfalar icin, olmazsa devam et)
-        continue-on-error: true
-        run: |
-          pip install playwright
-          playwright install --with-deps chromium
-
       - name: Linkleri kontrol et ve yenile
-        run: python official.py --browser
+        run: python official.py
 
       - name: Playlist'i kaydet
         run: |

@@ -1,3 +1,11 @@
-# canli_guncelleme = hayir  -> script sadece test eder ve log'a yazar, kanallar.m3u'ya DOKUNMAZ (ilk çalıştırma için güvenli mod)
+# canli_guncelleme = hayir  -> script sadece test eder ve log'a yazar, kanallar.m3u'ya DOKUNMAZ
 # canli_guncelleme = evet   -> ölü linkleri bulup taze linkle değiştirir ve kanallar.m3u'yu günceller
-canli_guncelleme = hayir
+canli_guncelleme = evet
+
+# Linkinde hem e= hem st= olan kanallar GitHub'dan ölü görünse bile TV'nde çalışabilir (IP'ye bağlı imza).
+# Bu yüzden VARSAYILAN olarak otomatik değiştirilmezler. Yalnızca burada adını yazdığın kanallar yenilenir.
+# Birden fazla kanal için virgülle ayır:  CNN Türk, Atv
+imzali_yenile_kanallar = CNN Türk
+
+# evet yaparsan imzalı tokenlilerin HEPSİ yenilenir (önerilmez, TV'de çalışanları bozabilir)
+imzali_tokenleri_yenile = hayir

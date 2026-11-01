@@ -1,0 +1,39 @@
+# Biçim:  Kanal adı | resmi canlı yayın sayfası
+# Link ölünce script bu sayfayı tarayıcıyla açıp yayının taze linkini yakalar.
+# Kanal adı kanallar.m3u'daki isimle aynı olmalı (büyük/küçük harf ve " TV" eki önemsiz).
+# DİKKAT: Bu adresler tahmindir. Linkleri aldığın gerçek adresler farklıysa düzelt.
+# Sayfa yazmadığın kanalların linki ölürse script ona dokunmaz.
+
+TRT 1 | https://www.trt1.com.tr/Canli-izle
+TRT Haber | https://www.trthaber.com/canli-yayin-izle/
+TRT Spor | https://www.trtspor.com.tr/canli-yayin-izle/trt-spor
+TRT Spor Yıldız | https://www.trtspor.com.tr/canli-yayin-izle/trt-spor-yildiz
+TRT Çocuk | https://www.trtcocuk.net.tr/canli-yayin
+
+Atv | https://www.atv.com.tr/canli-yayin
+a2 | https://www.a2tv.com.tr/canli-yayin
+A Haber | https://www.ahaber.com.tr/canli-yayin
+A Spor | https://www.aspor.com.tr/canli-yayin
+a Para | https://www.apara.com.tr/canli-yayin
+Minika Çocuk | https://www.minika.com.tr/canli-yayin
+Minika Go | https://www.minika.com.tr/canli-yayin
+
+Show | https://www.showtv.com.tr/canli-yayin
+Star | https://www.startv.com.tr/canli-yayin
+NOW | https://www.nowtv.com.tr/canli-yayin
+TV 8 | https://www.tv8.com.tr/canli-yayin
+Kanal D | https://www.kanald.com.tr/canli-yayin
+Teve 2 | https://www.teve2.com.tr/canli-yayin
+Kanal 7 | https://www.kanal7.com/canli-izle
+Beyaz TV | https://www.beyaztv.com.tr/canli-yayin
+TLC | https://www.tlctv.com.tr/canli-yayin
+DMAX | https://www.dmax.com.tr/canli-yayin
+
+NTV | https://www.ntv.com.tr/canli-yayin/ntv
+CNN Türk | https://www.cnnturk.com/canli-yayin
+HABERTÜRK TV | https://www.haberturk.com/canli-yayin
+Bloomberg HT | https://www.bloomberght.com/tv
+HT Spor | https://www.htspor.com/canli-yayin
+Halk TV | https://halktv.com.tr/canli-yayin
+CNBC-e | https://www.cnbce.com/canli-yayin
+Ekotürk | https://www.ekoturk.com/canli-yayin

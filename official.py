@@ -55,13 +55,27 @@ def domain(url):
 
 
 def read_settings():
-    live = False
+    """(canli_guncelleme, imzali_hepsi, imzali_izinli_kanallar)"""
+    live, allow_all, names = False, False, set()
     if os.path.exists(SETTINGS_FILE):
         for line in open(SETTINGS_FILE, encoding="utf-8"):
             line = line.strip()
-            if line.startswith("canli_guncelleme"):
-                live = line.split("=", 1)[1].strip().lower() in ("evet", "yes", "true", "1")
-    return live
+            if "=" not in line or line.startswith("#"):
+                continue
+            k, v = [x.strip() for x in line.split("=", 1)]
+            yes = v.lower() in ("evet", "yes", "true", "1")
+            if k == "canli_guncelleme":
+                live = yes
+            elif k == "imzali_tokenleri_yenile":
+                allow_all = yes
+            elif k == "imzali_yenile_kanallar":
+                names = {norm(x) for x in v.split(",") if x.strip()}
+    return live, allow_all, names
+
+
+def is_signed(url):
+    """e= (süre) ve st= (imza) içeren linkler genellikle IP'ye bağlı imzalı token taşır."""
+    return bool(re.search(r"[?&]st=", url) and re.search(r"[?&]e=", url))
 
 
 def load_pages():
@@ -160,7 +174,7 @@ def pick_fresh(hits, old_url):
 
 # ---------- ana akış ----------
 def main():
-    live = read_settings()
+    live, allow_all, allow_names = read_settings()
     pages = load_pages()
     lines, entries = parse_list()
     targets = [e for e in entries if is_m3u8(e["url"])]
@@ -185,7 +199,9 @@ def main():
     todo = {}
     for e in dead:
         page = pages.get(norm(e["name"]))
-        if page:
+        if is_signed(e["url"]) and not (allow_all or norm(e["name"]) in allow_names):
+            log.append(f"  ÖLÜ    {e['name']}  (imzalı token: e=/st=. GitHub'dan test edilemiyor, TV'nde çalışıyor olabilir, dokunulmadı)")
+        elif page:
             todo.setdefault(page, []).append(e)
         else:
             log.append(f"  ÖLÜ    {e['name']}  (sayfalar.txt'de adresi yok, dokunulmadı)")
@@ -199,14 +215,17 @@ def main():
                         for e in ents:
                             log.append(f"  ÖLÜ    {e['name']}  (süre/sayfa sınırı, sonraki çalıştırmada denenecek)")
                         continue
-                    best = pick_fresh(br.capture(page), ents[0]["url"])
+                    hits = br.capture(page)
+                    best = pick_fresh(hits, ents[0]["url"])
+                    info = (f"{len(hits)} m3u8 isteği yakalandı"
+                            + (": " + ", ".join(sorted({domain(h) for h in hits})[:4]) if hits else ""))
                     for e in ents:
                         if best:
                             changes[e["idx"]] = best["url"]
                             q = f" {best['height']}p" if best["height"] else ""
                             log.append(f"  YENİ   {e['name']}{q}")
                         else:
-                            log.append(f"  ÖLÜ    {e['name']}  (sayfadan çalışan link bulunamadı, eski link korundu)")
+                            log.append(f"  ÖLÜ    {e['name']}  (çalışan link bulunamadı, {info}; eski link korundu)")
         except Exception as ex:
             log.append(f"  Tarayıcı çalıştırılamadı: {ex}")
             for ents in todo.values():

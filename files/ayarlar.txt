@@ -1,0 +1,15 @@
+# canli_guncelleme = hayir  -> script sadece test eder ve log'a yazar, kanallar.m3u'ya DOKUNMAZ
+# canli_guncelleme = evet   -> ölü linkleri bulup taze linkle değiştirir ve kanallar.m3u'yu günceller
+canli_guncelleme = evet
+
+# Linkinde hem e= hem st= olan kanallar (CNN Türk, ATV, A Haber, A Spor, NOW...) IP'ye bağlı imza taşıyor.
+# Deneme sonucu: GitHub'ın aldığı taze link TV'de açılmadı. Bu yüzden bu kanallar GitHub'dan yenilenmiyor.
+# (Test için yine de bir kanalı denemek istersen adını buraya yaz, virgülle ayır.)
+imzali_yenile_kanallar =
+
+# evet yaparsan imzalı tokenlilerin HEPSİ yenilenir (önerilmez, çalışan linkleri bozar)
+imzali_tokenleri_yenile = hayir
+
+# Yerel çalıştırmadan sonra dosyayı yükleyeceğin GitHub deposu (yükleme sayfası otomatik açılır).
+# Örnek: github_depo = https://github.com/KULLANICI_ADIN/tv_playlist
+github_depo =

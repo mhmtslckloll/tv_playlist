@@ -8,12 +8,14 @@ Logo, grup, kanal sırası ve YouTube gibi .m3u8 olmayan linkler hiç değişmez
 
 ayarlar.txt içinde canli_guncelleme = hayir ise sadece test eder, dosyaya yazmaz.
 """
+import argparse
 import concurrent.futures as cf
 import os
 import re
 import subprocess
 import sys
 import time
+import webbrowser
 from urllib.parse import urlparse
 
 import requests
@@ -71,6 +73,46 @@ def read_settings():
             elif k == "imzali_yenile_kanallar":
                 names = {norm(x) for x in v.split(",") if x.strip()}
     return live, allow_all, names
+
+
+def read_depo():
+    if os.path.exists(SETTINGS_FILE):
+        for line in open(SETTINGS_FILE, encoding="utf-8"):
+            line = line.strip()
+            if line.startswith("github_depo") and "=" in line:
+                return line.split("=", 1)[1].strip()
+    return ""
+
+
+def online():
+    try:
+        r = requests.get("https://www.google.com/generate_204", timeout=8)
+        return r.status_code in (200, 204)
+    except Exception:
+        return False
+
+
+def post_update():
+    """Yerel çalıştırmadan sonra güncel listeyi GitHub'a ulaştırır."""
+    if os.path.isdir(".git"):
+        try:
+            subprocess.run(["git", "add", LIST_FILE], check=True)
+            subprocess.run(["git", "commit", "-m", "yerel guncelleme"], capture_output=True)
+            subprocess.run(["git", "pull", "--rebase", "--autostash"], capture_output=True)
+            subprocess.run(["git", "push"], check=True)
+            print("\nGitHub'a gönderildi. SS IPTV listeyi birkaç dakika içinde yeni haliyle görür.")
+            return
+        except Exception as ex:
+            print("\nGit ile gönderilemedi:", ex)
+    path = os.path.abspath(LIST_FILE)
+    print(f"\nSon adım: {path} dosyasını GitHub'a yükle (var olan dosyanın üzerine).")
+    depo = read_depo()
+    if depo:
+        webbrowser.open(depo.rstrip("/") + "/upload/main")
+    try:
+        os.startfile(os.path.dirname(path))      # Windows'ta klasörü açar
+    except Exception:
+        pass
 
 
 def is_signed(url):
@@ -173,8 +215,14 @@ def pick_fresh(hits, old_url):
 
 
 # ---------- ana akış ----------
-def main():
+def main(local=False):
     live, allow_all, allow_names = read_settings()
+    max_pages, budget = MAX_PAGES_PER_RUN, BROWSER_BUDGET_SEC
+    if local:   # kendi bilgisayarın: IP TV ile aynı olduğu için test ve yenileme güvenilir
+        live, allow_all, max_pages, budget = True, True, 80, 1500
+        if not online():
+            print("İnternet bağlantısı yok gibi görünüyor, hiçbir şeye dokunulmadı.")
+            return
     pages = load_pages()
     lines, entries = parse_list()
     targets = [e for e in entries if is_m3u8(e["url"])]
@@ -187,7 +235,7 @@ def main():
     print(f"[{time.strftime('%H:%M:%S')}] {len(entries)} kanal | {len(targets)} .m3u8 linki: {ok} çalışıyor, {len(dead)} ölü | "
           f"{len(entries) - len(targets)} link test edilemiyor (YouTube vb.) | mod: {'CANLI' if live else 'SADECE TEST'}")
 
-    if len(targets) and len(dead) / len(targets) > MASS_FAILURE_RATIO:
+    if not local and len(targets) and len(dead) / len(targets) > MASS_FAILURE_RATIO:
         print(f"\nUYARI: Linklerin %{100 * len(dead) // len(targets)}'i aynı anda ölü görünüyor. Bu büyük ihtimalle linklerin "
               "değil, GitHub sunucusunun IP'sinin engellenmesinden kaynaklanıyor. Yanlışlıkla çalışan linkleri bozmamak "
               "için hiçbir şeye dokunulmadı.")
@@ -211,10 +259,11 @@ def main():
         try:
             with Browser() as br:
                 for n, (page, ents) in enumerate(todo.items()):
-                    if n >= MAX_PAGES_PER_RUN or time.time() - start > BROWSER_BUDGET_SEC:
+                    if n >= max_pages or time.time() - start > budget:
                         for e in ents:
                             log.append(f"  ÖLÜ    {e['name']}  (süre/sayfa sınırı, sonraki çalıştırmada denenecek)")
                         continue
+                    print(f"  ... [{n + 1}/{len(todo)}] {page}", flush=True)
                     hits = br.capture(page)
                     best = pick_fresh(hits, ents[0]["url"])
                     info = (f"{len(hits)} m3u8 isteği yakalandı"
@@ -242,10 +291,14 @@ def main():
             f.write("\n".join(lines))
         os.replace(tmp, LIST_FILE)
         print(f"\n{len(changes)} link güncellendi ve {LIST_FILE} kaydedildi.")
+        if local:
+            post_update()
     elif changes:
         print(f"\nSADECE TEST modu: {len(changes)} link yenilenebilirdi ama {LIST_FILE} değiştirilmedi. "
               "Sonuçlar iyiyse ayarlar.txt'de canli_guncelleme = evet yap.")
 
 
 if __name__ == "__main__":
-    main()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--yerel", action="store_true", help="kendi bilgisayarında çalıştır (imzalı tokenlar dahil yeniler)")
+    main(ap.parse_args().yerel)

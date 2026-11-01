@@ -1,0 +1,3 @@
+# canli_guncelleme = hayir  -> script sadece test eder ve log'a yazar, kanallar.m3u'ya DOKUNMAZ (ilk çalıştırma için güvenli mod)
+# canli_guncelleme = evet   -> ölü linkleri bulup taze linkle değiştirir ve kanallar.m3u'yu günceller
+canli_guncelleme = hayir

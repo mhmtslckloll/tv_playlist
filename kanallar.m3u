@@ -1,18 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-name="BEIN SPORT 1" tvg-logo="https://static.cdnlogo.com/logos/b/580/bein-sports-1.svg" group-title="SPOR",BEIN SPORT 1
-https://andro.evrenesoglu225.click/checklist/batutest.m3u8
-#EXTINF:-1 tvg-name="BEIN SPORT 2" tvg-logo="https://static.cdnlogo.com/logos/b/580/bein-sports-1.svg" group-title="SPOR",BEIN SPORT 2
-https://css.d6e3eds5e065t5.help//bein2/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-name="BEIN SPORT 3" tvg-logo="https://static.cdnlogo.com/logos/b/580/bein-sports-1.svg" group-title="SPOR",BEIN SPORT 3
-https://css.d6e3eds5e065t5.help//bein3/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-name="BEIN SPORT 4" tvg-logo="https://static.cdnlogo.com/logos/b/580/bein-sports-1.svg" group-title="SPOR",BEIN SPORT 4
-https://css.d6e3eds5e065t5.help//bein4/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-name="BEIN SPORT 5" tvg-logo="https://static.cdnlogo.com/logos/b/580/bein-sports-1.svg" group-title="SPOR",BEIN SPORT 5
-https://css.d6e3eds5e065t5.help//bein5/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-name="S SPORTS 1" tvg-logo="https://tr.wikipedia.org/wiki/Dosya:S_Sport_Plus_Logo.png" group-title="SPOR",S SPORTS 1
-https://css.d6e3eds5e065t5.help//s-sport/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-name="S SPORTS 2" tvg-logo="https://tr.wikipedia.org/wiki/Dosya:S_Sport_Plus_Logo.png" group-title="SPOR",S SPORTS 2
-https://css.d6e3eds5e065t5.help//s-sport2/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="TRT Spor" tvg-logo="https://www.tvlogo.org/turkey/trt-spor-tr.png" group-title="SPOR",TRT Spor
 https://trt.daioncdn.net/trtspor/master_1440p.m3u8?platform=trtspor&sid=8vr4pvdghd66&app=9b65474e-8197-4899-aabb-321fcf6dd9eb&ce=2
 #EXTINF:-1 tvg-name="beIN SPORTS HABER" tvg-logo="https://www.tvlogo.org/turkey/bein-sports-haber-tr.png" group-title="SPOR",beIN SPORTS HABER

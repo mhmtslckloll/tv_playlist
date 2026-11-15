@@ -27,13 +27,13 @@ https://live.duhnet.tv//S2/HLS_LIVE/cnnturknp/playlist.m3u8?&live=true&app=com.c
 #EXTINF:-1 tvg-name="HABERTÜRK TV" tvg-logo="https://www.tvlogo.org/turkey/haberturk-tr.png" group-title="HABER",HABERTÜRK TV
 https://ciner.daioncdn.net/haberturktv/haberturktv_1080p.m3u8?sid=8m2xx7p36idp&app=c98ab0b0-50cc-495b-bb37-778e91f5ff5b&ce=3
 #EXTINF:-1 tvg-name="Bloomberg HT" tvg-logo="https://www.tvlogo.org/turkey/bloomberg-ht-tr.png" group-title="HABER",Bloomberg HT
-https://ciner.daioncdn.net/bloomberght/bloomberght_720p.m3u8?ex=1649424566&st=4Y790MeXScF5LDOhVNykUQ&tv=1&sid=8x6xua8e05hg&app=201b9556-b11c-4d92-b264-f21fd24e9aaf&ce=3
+https://ciner.daioncdn.net/bloomberght/bloomberght_720p.m3u8?ex=1649424566&st=4Y790MeXScF5LDOhVNykUQ&tv=1&sid=8x6y3xvwr7pj&app=201b9556-b11c-4d92-b264-f21fd24e9aaf&ce=3
 =======
 https://live.duhnet.tv//S2/HLS_LIVE/cnnturknp/playlist.m3u8?&live=true&app=com.cnnturk&st=EGU-VJ79oq9R6l31icUrsA&e=1794756173
 #EXTINF:-1 tvg-name="HABERTÜRK TV" tvg-logo="https://www.tvlogo.org/turkey/haberturk-tr.png" group-title="HABER",HABERTÜRK TV
 https://ciner.daioncdn.net/haberturktv/haberturktv_1080p.m3u8?sid=8m2xx7p36idp&app=c98ab0b0-50cc-495b-bb37-778e91f5ff5b&ce=3
 #EXTINF:-1 tvg-name="Bloomberg HT" tvg-logo="https://www.tvlogo.org/turkey/bloomberg-ht-tr.png" group-title="HABER",Bloomberg HT
-https://ciner.daioncdn.net/bloomberght/bloomberght_720p.m3u8?ex=1649424566&st=4Y790MeXScF5LDOhVNykUQ&tv=1&sid=8x6xuaagx3ut&app=201b9556-b11c-4d92-b264-f21fd24e9aaf&ce=3
+https://ciner.daioncdn.net/bloomberght/bloomberght_720p.m3u8?ex=1649424566&st=4Y790MeXScF5LDOhVNykUQ&tv=1&sid=8x6y3xvwr7pi&app=201b9556-b11c-4d92-b264-f21fd24e9aaf&ce=3
 >>>>>>> 295f6de (yerel guncelleme)
 #EXTINF:-1 tvg-name="Tvnet" tvg-logo="https://www.tvlogo.org/turkey/tvnet-tr.png" group-title="HABER",Tvnet
 https://tvnet-live.lg.mncdn.com/tvnet-live/tvnet/chunklist_w901276119.m3u8
@@ -46,7 +46,7 @@ https://cdn.ekoturk.net/hls/720p.m3u8
 #EXTINF:-1 tvg-name="TRT 1" tvg-logo="https://www.tvlogo.org/turkey/trt-1-tr.png" group-title="ULUSAL KANALLAR",TRT 1
 https://trt.daioncdn.net/trt-1/master_1080p.m3u8?&sid=8x6xu9sbldyi&app=ed3904e8-737b-4a5e-856a-1b0d7a0a94e2&ce=2
 #EXTINF:-1 tvg-name="TRT 1" tvg-logo="https://www.tvlogo.org/turkey/trt-1-tr.png" group-title="ULUSAL KANALLAR",TRT 1
-https://trt.daioncdn.net/trt-1/master_1080p.m3u8?&sid=8x6xu9ozq9d5&app=ed3904e8-737b-4a5e-856a-1b0d7a0a94e2&ce=2
+https://trt.daioncdn.net/trt-1/master_1080p.m3u8?&sid=8x6y3xfwuclu&app=ed3904e8-737b-4a5e-856a-1b0d7a0a94e2&ce=2
 #EXTINF:-1 tvg-name="Atv" tvg-logo="https://www.tvlogo.org/turkey/atv-tr.png" group-title="ULUSAL KANALLAR",Atv
 https://trkvz.daioncdn.net/atv/atv_1080p.m3u8?e=1794790600&st=NKpxg8mYltW2-yYVzARLtw&sid=8x6xua91rc5s&app=d1ce2d40-5256-4550-b02e-e73c185a314e&ce=3
 #EXTINF:-1 tvg-name="Show" tvg-logo="https://www.tvlogo.org/turkey/show-tr.png" group-title="ULUSAL KANALLAR",Show

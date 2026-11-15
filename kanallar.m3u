@@ -7,10 +7,6 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor_1080p.m3u8
 https://ciner.daioncdn.net/ht-spor/ht-spor_1080p.m3u8?ex=0&sid=8vr4tp1duhe6&app=d5539841-018b-48b4-80fe-8bac2ffc3d5e&ce=2
 #EXTINF:-1 tvg-name="TRT Spor Yıldız" tvg-logo="https://www.tvlogo.org/turkey/trt-spor-yildiz-tr.png" group-title="SPOR",TRT Spor Yıldız
 https://trt.daioncdn.net/trtspor-yildiz/master_1440p.m3u8?platform=trtspor&sid=8vr4x7bx7ntl&app=6d14425d-4281-477b-8b74-49c40e4aa8b8&ce=2
-#EXTINF:-1 tvg-name="Minika Çocuk" tvg-logo="https://www.tvlogo.org/turkey/minika-cocuk-tr.png" group-title="Çocuk & Eğitim",Minika Çocuk
-https://trkvz.daioncdn.net/minikago_cocuk/minikago_cocuk_720p.m3u8?e=1793538538&st=jpFofnCVs6RND8zjHgTpiA&sid=8vr5ijcemy5s&app=8e9e79c3-44e3-4a41-a921-1d8f0e7887c0&ce=3
-#EXTINF:-1 tvg-name="Minika Go" tvg-logo="https://www.tvlogo.org/turkey/minika-go-tr.png" group-title="Çocuk & Eğitim",Minika Go
-https://trkvz.daioncdn.net/minikago/minikago_720p.m3u8?e=1793538562&st=d13FKM1Nff7RuHK5EgWOJQ&sid=8vr5jspddnhh&app=be451f3e-b8d8-4edd-8469-1030b5ad7fd3&ce=3
 #EXTINF:-1 tvg-name="TRT Diyanet Çocuk" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/af/TRT_Diyanet_%C3%87ocuk_logo.png" group-title="Çocuk & Eğitim",TRT Diyanet Çocuk
 https://tv-trtdiyanetcocuk.medya.trt.com.tr/master_1440.m3u8
 #EXTINF:-1 tvg-name="TRT Çocuk" tvg-logo="https://www.tvlogo.org/turkey/trt-cocuk-tr.png" group-title="Çocuk & Eğitim",TRT Çocuk

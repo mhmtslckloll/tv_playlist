@@ -31,7 +31,7 @@ https://ciner.daioncdn.net/bloomberght/bloomberght_720p.m3u8?ex=1649424566&st=4Y
 =======
 https://live.duhnet.tv//S2/HLS_LIVE/cnnturknp/playlist.m3u8?&live=true&app=com.cnnturk&st=EGU-VJ79oq9R6l31icUrsA&e=1794756173
 #EXTINF:-1 tvg-name="HABERTÜRK TV" tvg-logo="https://www.tvlogo.org/turkey/haberturk-tr.png" group-title="HABER",HABERTÜRK TV
-https://ciner.daioncdn.net/haberturktv/haberturktv_1080p.m3u8?sid=8m2xx7p36idp&app=c98ab0b0-50cc-495b-bb37-778e91f5ff5b&ce=3
+https://vmcdn.ciner.com.tr/ht/2026/11/05/8A566FD0DD1A42561553902AC83FC181.m3u8
 #EXTINF:-1 tvg-name="Bloomberg HT" tvg-logo="https://www.tvlogo.org/turkey/bloomberg-ht-tr.png" group-title="HABER",Bloomberg HT
 https://ciner.daioncdn.net/bloomberght/bloomberght_720p.m3u8?ex=1649424566&st=4Y790MeXScF5LDOhVNykUQ&tv=1&sid=8x6y3xvwr7pi&app=201b9556-b11c-4d92-b264-f21fd24e9aaf&ce=3
 >>>>>>> 295f6de (yerel guncelleme)
